@@ -1,0 +1,13 @@
+function filterProjects() {
+    const filter = document.getElementById('projectFilter').value.toLowerCase();
+    const projects = document.querySelectorAll('#projectList .project');
+
+    projects.forEach(project => {
+        const text = project.textContent.toLowerCase();
+        if (text.includes(filter)) {
+            project.style.display = '';
+        } else {
+            project.style.display = 'none';
+        }
+    });
+}
